@@ -86,6 +86,7 @@ curl localhost:47400/consumers
 | Type | Publisher | Consumers | Data |
 |------|-----------|-----------|------|
 | `email.received` | gmail-bar | racuni | `EmailReceived`: account, ids, from, subject, snippet, date, Gmail link, `filtered`. PDF and image attachments, up to 15 MB each. |
+| `post.drafted` | IDE sessions | content-planner | `PostDrafted`: space, day, title, body, status. Image and video attachments become the post's assets. Content Planner overwrites whatever sits on that day. |
 
 ## Where things live
 
