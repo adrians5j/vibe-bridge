@@ -40,8 +40,9 @@ public struct EmailReceived: Codable, Sendable, Equatable {
 /// files it on that day, and image or video attachments become the post's assets.
 ///
 /// `id` is the dedupe key and doubles as the link back: re-publishing the same id
-/// updates the post it created rather than adding another. A natural key like
-/// `cp:<space>:<day>` makes a re-run idempotent.
+/// updates the post it created rather than adding another, while a new id adds a post
+/// to the day next to the ones already there. A natural key like `cp:<space>:<day>`
+/// (add a suffix for a second post that day) makes a re-run idempotent.
 public struct PostDrafted: Codable, Sendable, Equatable {
     public static let type = "post.drafted"
 
